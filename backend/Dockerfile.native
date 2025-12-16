@@ -1,0 +1,31 @@
+# Use a Maven image to build the application
+FROM gradle:jdk-21-and-23-graal-jammy AS builder
+
+# Set the working directory inside the builder stage
+WORKDIR /workspace
+
+# Copy the project files
+COPY . .
+
+RUN chmod +x mvnw
+
+# Build the application with native profile
+RUN ./mvnw native:compile -Pnative -DskipTests
+
+# Use a lightweight image to run the application
+FROM debian:bookworm-slim
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the built native image from the builder stage
+COPY --from=builder /workspace/target/jwt-spring-boot /app/
+
+# Ensure the executable has the right permissions
+RUN chmod +x /app/jwt-spring-boot
+
+# Expose the port the application runs on
+EXPOSE 8080
+
+# Run the application
+CMD ["/app/jwt-spring-boot"]

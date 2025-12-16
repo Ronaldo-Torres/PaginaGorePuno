@@ -1,0 +1,40 @@
+User-agent: *
+Allow: /
+
+# Permitir acceso a recursos estáticos
+Allow: /images/
+Allow: /css/
+Allow: /js/
+Allow: /_next/static/
+
+# Bloquear archivos administrativos y de desarrollo
+Disallow: /dashboard/
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /auth/
+Disallow: /login/
+Disallow: /signup/
+
+# Bloquear archivos de configuración
+Disallow: /*.json$
+Disallow: /*.env$
+Disallow: /*.config.*$
+
+# Permitir bots de redes sociales
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# Crawl-delay para evitar sobrecarga
+Crawl-delay: 1
+
+# Sitemap
+Sitemap: https://consejo.regionpuno.gob.pe/sitemap.xml
+Sitemap: https://consejo.regionpuno.gob.pe/sitemap-noticias.xml
+Sitemap: https://consejo.regionpuno.gob.pe/sitemap-documentos.xml 

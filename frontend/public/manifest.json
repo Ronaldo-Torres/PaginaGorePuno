@@ -1,0 +1,74 @@
+{
+  "name": "Consejo Regional de Puno",
+  "short_name": "Consejo Regional Puno",
+  "description": "Portal oficial del Consejo Regional de Puno - Órgano de debate, fiscalización y legislación del Gobierno Regional",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#184482",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "categories": ["government", "politics", "news"],
+  "lang": "es",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/logoheader.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logoheader.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/logoheader.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Noticias",
+      "short_name": "Noticias",
+      "description": "Últimas noticias del Consejo Regional",
+      "url": "/noticias",
+      "icons": [
+        {
+          "src": "/logoheader.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Agenda",
+      "short_name": "Agenda",
+      "description": "Agenda de actividades y sesiones",
+      "url": "/agenda",
+      "icons": [
+        {
+          "src": "/logoheader.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Documentos",
+      "short_name": "Documentos",
+      "description": "Documentos oficiales y normativas",
+      "url": "/documentos",
+      "icons": [
+        {
+          "src": "/logoheader.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+} 

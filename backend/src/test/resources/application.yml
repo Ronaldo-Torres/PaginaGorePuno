@@ -1,0 +1,21 @@
+spring:
+  profiles:
+    active: test
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          secret-key: YWJjZGVmZ2hpamtsbW5vcHFyc3R1dnd4eXphYmNkZWZnaGlqa2xtbm9wcXJzdHV2d3h5ZXphYmNkZWZnaGlqa2xtbm9wcXJzdHV2d3h5ZXphYmNkZWZnaGlqa2xtbm9wcXJzdHV2d3h5eg==
+
+app:
+  url:
+    frontend: http://localhost:3000
+  jwt:
+    expirationMs: 3600000
+    jwtRefreshExpirationMs: 604800000
+    issuer: programandoenjava.com
+
+logging:
+  level:
+    web: trace
+    org.springframework.security: trace

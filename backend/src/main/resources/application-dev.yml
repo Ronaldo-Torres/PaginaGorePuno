@@ -1,0 +1,20 @@
+logging:
+  level:
+    web: debug
+    org.springframework.security: debug
+
+spring:
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/java
+    livereload:
+      enabled: true
+
+app:
+  url:
+    frontend: http://localhost:3000
+  jwt:
+    expirationMs: ${JWT_EXPIRATION_MS}
+    jwtRefreshExpirationMs: ${JWT_REFRESH_EXPIRATION_MS}
+    issuer: programandoenjava.com
